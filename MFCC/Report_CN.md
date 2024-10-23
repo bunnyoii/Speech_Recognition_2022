@@ -1,31 +1,32 @@
-# Speech_Recognition_2022
+# 语音识别
 
-Tongji University · Class of 2022 · School of Computer Science and Technology · Software Engineering · Machine Intelligence Direction · Speech Recognition Coursework
+同济大学 2022级 计算机科学与技术学院 软件工程专业 机器智能方向 语音识别课程作业
 
-Teacher: Ying Shen
+授课教师：沈莹
 
-Semester of instruction: 2024-2025, autumn semester
+授课学期：2024-2025年度 秋季学期
 
-# Task: MFCC Extraction
+# 任务: MFCC Extraction
 
-Extract acoustic features (MFCC) for a segment of speech. Comment your codes properly.
+提取语音片段的声学特征（MFCC）。正确注释您的代码。
 
-Processing steps include:
+处理步骤包括
 
-- Pre-emphasis
-- Windowing
+- 预加重
+- 窗函数
 - STFT
-- Mel-filter bank
-- Log()
+- 梅尔滤波器组
+- 对数()
 - DCT
-- Dynamic feature extraction
-- Feature transformation
+- 动态特征提取
+- 特征变换
 
-Compare your results with the output of MFCC function provided by Python package. Give possible reasons for the difference in your report.
+将您的结果与 Python 软件包提供的 MFCC 函数输出结果进行比较。 请在报告中说明造成差异的可能原因。
 
-Upload your codes and report.
+上传代码和报告。
 
 # 综述
+
 本报告阐述了MFCC（梅尔频率倒谱系数）声学特征从语音段中的提取过程。我们将依次探讨以下步骤：预加重、窗口化、短时傅里叶变换、梅尔滤波器组、取对数、离散余弦变换、动态特征提取和特征转换，并附带相关图形输出，如频谱图和MFCC。通过详细分析每个步骤的实现与效果，我们将揭示MFCC提取在语音处理中的重要性及其在实际应用中的潜在影响。
 
 # 导入包并加载音频
@@ -62,7 +63,7 @@ Upload your codes and report.
 
 在音频信号处理中，窗函数（Windowing）是一种常用的技术，用于将连续信号分成重叠的帧，以便进行后续的频域分析，如短时傅里叶变换（STFT）。窗函数的主要目的是减小由于信号截断而导致的频谱泄漏现象，从而提高频域特征的准确性和解析度。
 
-1. 帧分割：首先，输入的音频信号被分割成若干个重叠的帧。每一帧的长度由frame_size决定，而每两帧之间的时间间隔由frame_stride控制。这种重叠的设计可以确保信号中重要的频率信息不会因帧的截断而丢失。
+1. 帧分割：首先，输入的音频信号被分割成若干个重叠的帧。每一帧的长度由 `frame_size` 决定，而每两帧之间的时间间隔由 `frame_stride` 控制。这种重叠的设计可以确保信号中重要的频率信息不会因帧的截断而丢失。
 
 2. 窗函数选择：在本代码中，选择了汉明窗（Hamming Window）作为窗函数。汉明窗是一种平滑的窗函数，可以有效地减小频谱泄漏现象。其数学表达式为：
 
