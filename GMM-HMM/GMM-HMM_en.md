@@ -61,7 +61,7 @@ The complete code and output are in the **GMM-HMM.ipynb** file, and the feature 
 ### Using Features Extracted from Your First Assignment as Input
 
 #### Experimental Observations
-The features extracted from your first assignment are saved in the **feature.pkl** file, and the detailed code is in the **MFCC_Extraction.ipynb** file.
+The features extracted from your first assignment are saved in the **features.npy** file, and the detailed code is in the **MFCC_Extraction.ipynb** file.
 
 The extracted features include:
 

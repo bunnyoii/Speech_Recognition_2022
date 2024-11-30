@@ -62,7 +62,7 @@ p(x|\mu, \Sigma) = \frac{1}{(2\pi)^{D/2} |\Sigma|^{1/2}} e^{-\frac{1}{2}(x-\mu)^
 ### 把自己第一次作业提取的特征作为输入
 
 #### 实验现象
-将自己第一次作业提取的特征保存到 **feature.pkl** 文件中，详细代码在 **MFCC_Extraction.ipynb**文件中。
+将自己第一次作业提取的特征保存到 **features.npy** 文件中，详细代码在 **MFCC_Extraction.ipynb**文件中。
 
 提取的特征值包括：
 
